@@ -12,7 +12,7 @@ var gulp = require('gulp'),
 
 // Styles
 gulp.task('styles', function(){
-	 gulp.src('./src/style.styl')
+	 gulp.src('./src/css/style.styl')
 		.pipe(sourcemaps.init())
 		.pipe(stylus({
 			use: [jeet()],
@@ -49,5 +49,5 @@ gulp.task('browser-sync', function() {
 // Watch!
 gulp.task('watch', ['browser-sync'], function(){
 	gulp.watch('./src/*.jade', ['templates']);
-	gulp.watch('./src/style.styl', ['styles']);
+	gulp.watch('./src/css/style.styl', ['styles']);
 });
