@@ -1,0 +1,4 @@
+node_modules/
+_build
+.DS_store
+nmp-debug.log
