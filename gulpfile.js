@@ -49,5 +49,5 @@ gulp.task('browser-sync', function() {
 // Watch!
 gulp.task('watch', ['browser-sync'], function(){
 	gulp.watch('./src/*.jade', ['templates']);
-	gulp.watch('./src/css/style.styl', ['styles']);
+	gulp.watch('./src/css/*.styl', ['styles']);
 });
