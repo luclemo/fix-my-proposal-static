@@ -8,6 +8,16 @@ body
 	
 	section.hero
 		h1 Fix My Proposal
+
+	header
+		.logo
+			img(src="http://lorempixel.com/50/50/", alt="fix my proposal logo")
+		nav
+			ul
+				li
+					a(href="#") Articles
+				li
+					a(href="#") Let's fix it!
 	
 	section.tag-line.optin
 		h2 Proposal reviews to help new designers & developers land quality projects today.
@@ -20,6 +30,9 @@ body
 			input(type='submit', value='Put me on your list!')
 	
 	section.description
+		div.callout.small
+			| Launching in 
+			span May!
 		h3 Congrats, you've gone freelance! Now you're…  all alone?!
 		p Speak to anyone who's been at this for a few years and they'll tell you that your first 3-5 projects will be a series of costly lessons learned the hard way.
 		p
@@ -49,3 +62,18 @@ body
 			li Win client trust by using language which will resonate with them
 			li Win client trust by using language which will resonate with them
 			li Win client trust by using language which will resonate with them
+		div.callout.large Packages & pricing coming in May!
+
+	section.about
+		img(src="http://lorempixel.com/250/250/", alt="Lucas Lemonnier")
+		h4 Who am I and why am I doing this?
+		p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos nesciunt sit, odit, praesentium, labore quam et porro atque qui architecto ipsum maxime vel. Sint tenetur eligendi veniam provident, optio assumenda.
+
+	section.optin
+		h2 Let me find the holes in your proposal before your client does.
+		p Get notified about launch date & receive my free 
+			stong client questionnaire. 
+		form.signup(method='POST')
+			label(for='email')
+			input(type='email', name='email', placeholder='Email Address…')
+			input(type='submit', value='Put me on your list!')
