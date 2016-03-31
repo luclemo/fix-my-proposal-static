@@ -25,11 +25,31 @@ siteWidth()
 	max-width 960px
 	margin 0 auto
 	
-// Components
-radius()
-	border-radius 5px
+// Border-radius -----------------------
+fullRadius(px = 5px)
+	border-radius px
+topRadius(px = 5px)
+	border-top-left-radius px
+	border-top-right-radius px
+rightRadius(px = 5px)
+	border-bottom-right-radius px
+	border-top-right-radius px
+bottomRadius(px = 5px)
+	border-bottom-left-radius px
+	border-bottom-right-radius px
+leftRadius(px = 5px)
+	border-bottom-left-radius px
+	border-top-left-radius px
 
+// Borders -----------------------
+doubleBorder(outterSize, outterColor, innerSize, innerColor)
+	box-shadow 	inset 0 0 0 outterSize outterColor,
+							inset 0 0 0 innerSize innerColor
+
+// Components -----------------------
 box()
 	border 2px solid teal
 	background alpha(teal, 0.1)
-	radius()
+	full-radius()
+	
+							
