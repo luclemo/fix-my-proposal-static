@@ -15,6 +15,7 @@ body
 	color blue
 	background cream
 	
+	
 // Layout ---------------------------
 .wrapper
 	siteWidth()
@@ -29,24 +30,31 @@ section
 	padding 28rem 0
 	
 // Header ---------------------------
-header
+.site-header
 	background teal
 	border 1px solid
 	.wrapper
 		display flex
 		justify-content space-between
-	.logo 
-		background red
-	.main-nav
-		background olive
-		ul
-			list-style none
-			margin 0
-			padding 0
-			display flex
-			justify-content center
-			align-items center
-		
+		align-items center
+.site-logo 
+	background red
+
+// Main nav ---------------------------
+.main-nav
+	ul
+		list-style none
+		margin 0
+		padding 0
+		display flex
+		justify-content flex-end
+		li
+			margin-left 4rem
+			a
+				padding 2rem
+				text-decoration none
+				color cream
+				font-family fontSecondary		
 // Optins ---------------------------
 .optin
 	text-align center
