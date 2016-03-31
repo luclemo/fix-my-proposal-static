@@ -34,6 +34,7 @@ section
 .site-header
 	background teal
 	border 1px solid
+	padding 3rem 0
 	.wrapper
 		display flex
 		justify-content space-between
@@ -52,10 +53,23 @@ section
 		li
 			margin-left 4rem
 			a
-				padding 2rem
+				font-size 2.2rem
+				padding 1.5rem
 				text-decoration none
-				color cream
-				font-family fontSecondary		
+				color tealPale
+				font-family fontSecondary
+				&:hover
+					color cream
+		.cta a
+			color teal
+			background tealPale
+			padding 1rem 2rem
+			doubleBorder(2px, tealPale, 4px, teal)
+			fullRadius(8px)
+			&:hover
+					background teal
+					color cream
+					
 // Optins ---------------------------
 .optin
 	text-align center
