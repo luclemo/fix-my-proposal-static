@@ -1,3 +1,7 @@
+// =================================
+// VARIABLES
+// =================================
+
 // colors ------------------------
 cream = 		#FCFCF6
 blue = 			#41637B
@@ -12,8 +16,20 @@ fontMain = 'AvenirNextLTW01-Regular', sans-serif
 fontMainBold = 'Avenir Next LT W04 Bold', sans-serif
 fontSecondary = 'Ahkio W00 Light', cursive
 
+// =================================
+// MIXINS
+// =================================
 
 // layout -----------------------
 siteWidth()
 	max-width 960px
 	margin 0 auto
+	
+// Components
+radius()
+	border-radius 5px
+
+box()
+	border 2px solid teal
+	background alpha(teal, 0.1)
+	radius()
