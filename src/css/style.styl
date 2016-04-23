@@ -40,19 +40,26 @@ section
 		display flex
 		justify-content space-between
 		align-items center
-		background gray
+		// border 1px solid gray
 .site-logo
-	height 78px
-	// position relative
-	// height 183px
-	// left: -343px;
-	// top: 3px;
+	// background steelblue
+	width 180px
+	height 82px
 	#logo-group
 		fill cream
+		transform translateX(-170px)
+		transition all 0.2s ease-in-out
 	#parachute
 		fill tealPale
 	#proposal, #fix
-		// visibility hidden
+		opacity 0
+		transition all 0.2s ease-in-out
+		transition-delay 0.2s
+	&:hover #logo-group
+		transform translateX(0px)	
+	&:hover #proposal,
+	&:hover #fix
+		opacity 1	
 
 // Main nav ---------------------------
 .main-nav
