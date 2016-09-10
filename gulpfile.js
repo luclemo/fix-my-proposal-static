@@ -7,6 +7,7 @@ var gulp = require('gulp'),
 	browserSync = require('browser-sync'),
 	sourcemaps = require('gulp-sourcemaps'),
 	jade = require('gulp-jade'),
+	imagemin = require('gulp-imagemin'),
 	reload = browserSync.reload;
 
 // Styles
@@ -24,7 +25,7 @@ gulp.task('styles', function(){
 		.pipe(reload({ stream : true }))
 });
 
-// Temaplates
+// Templates
 gulp.task('templates',function(){
   gulp.src(['./src/*.jade'])
     .pipe(jade({
@@ -33,6 +34,15 @@ gulp.task('templates',function(){
     .pipe(gulp.dest('./_build/'))
     .pipe(reload({ stream : true }))
 });
+
+// Images
+gulp.task('images', function() {
+  return gulp.src('./src/images/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('./_build/img'))
+    .pipe(reload({ stream : true }))
+});
+
 
 // Start the server
 gulp.task('browser-sync', function() {
@@ -47,4 +57,5 @@ gulp.task('browser-sync', function() {
 gulp.task('watch', ['browser-sync'], function(){
 	gulp.watch('./src/*.jade', ['templates']);
 	gulp.watch('./src/css/**/*.styl', ['styles']);
+	gulp.watch('./src/images/*', ['images']);
 });
