@@ -1,26 +1,21 @@
-// layout -----------------------
-siteWidth()
-  max-width 960px
-  margin 0 auto
-  
-// Border-radius -----------------------
-fullRadius(px = 5px)
+  // Border-radius -----------------------
+full-radius(px = 5px)
   border-radius px
-topRadius(px = 5px)
+top-radius(px = 5px)
   border-top-left-radius px
   border-top-right-radius px
-rightRadius(px = 5px)
+right-radius(px = 5px)
   border-bottom-right-radius px
   border-top-right-radius px
-bottomRadius(px = 5px)
+bottom-radius(px = 5px)
   border-bottom-left-radius px
   border-bottom-right-radius px
-leftRadius(px = 5px)
+left-radius(px = 5px)
   border-bottom-left-radius px
   border-top-left-radius px
 
 // Borders -----------------------
-doubleBorder(outterSize, outterColor, innerSize, innerColor)
+double-border(outterSize, outterColor, innerSize, innerColor)
   box-shadow  inset 0 0 0 outterSize outterColor,
               inset 0 0 0 innerSize innerColor
 
@@ -31,7 +26,7 @@ box()
   full-radius()
   
 // a11y --------------------
-mixin screen-reader()
+screen-reader()
   border 0
   clip rect(0 0 0 0)
   height 1px
