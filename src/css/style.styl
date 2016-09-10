@@ -1,64 +1,70 @@
 @import '_normalize.styl'
 @import 'jeet'
 @import '_variables.styl'
+@import '_mixins.styl'
 @import '_typography.styl'
 
 // edit()
 
 // Defaults ---------------------------
 html
-	font-size 10px
+	font-size 100%
 body
-	-webkit-font-smoothing antialiased
+	// -webkit-font-smoothing antialiased
 	font-family fontMain
-	font-size 1.8rem
+	font-size 1.25rem
 	line-height 1.5
 	color blue
 	background cream
-	
 
 // Layout ---------------------------
 .wrapper
-	siteWidth()
+	max-width 960px
+	margin 0 auto
 	
 section
-	padding 10rem 0
+	padding 6.25rem 0
+	
+// logo ---------------------------
+.site-logo
+	background steelblue
+	width 180px
+	height 82px
+.logo-group
+	fill cream
+.parachute
+	fill tealPale
 	
 // Hero ---------------------------
 .hero
 	background teal
 	text-align center
-	padding 28rem 0
 	height 100vh
 	
 // Header ---------------------------
 .site-header
 	background teal
 	border 1px solid
-	padding 3rem 0
+	padding 1.875rem 0
 	.wrapper
 		display flex
 		justify-content space-between
 		align-items center
 		// border 1px solid gray
-.site-logo
-	// background steelblue
+.site-header-logo
 	width 180px
 	height 82px
-	#logo-group
-		fill cream
+	.logo-group
 		transform translateX(-170px)
 		transition all 0.2s ease-in-out
-	#parachute
-		fill tealPale
-	#proposal, #fix
+	.proposal, .fix
 		opacity 0
 		transition all 0.2s ease-in-out
 		transition-delay 0.2s
-	&:hover #logo-group
+	&:hover .logo-group
 		transform translateX(0px)	
-	&:hover #proposal,
-	&:hover #fix
+	&:hover .proposal,
+	&:hover .fix
 		opacity 1	
 
 // Main nav ---------------------------
@@ -70,10 +76,11 @@ section
 		display flex
 		justify-content flex-end
 		li
-			margin-left 4rem
+			margin-left 2.5rem
+			margin-bottom 0
 			a
-				font-size 2.2rem
-				padding 1.5rem
+				font-size 1.375rem
+				padding 1.5em
 				text-decoration none
 				color tealPale
 				font-family fontSecondary
@@ -82,7 +89,7 @@ section
 		.cta a
 			color teal
 			background tealPale
-			padding 1rem 2rem
+			padding 0.6em 1em
 			doubleBorder(2px, tealPale, 4px, teal)
 			fullRadius(8px)
 			&:hover
@@ -97,5 +104,6 @@ section
 	color cream
 	
 .description
+	font-size fz-small
 	box()
-	padding 10rem 17.03125%
+	padding 6.25rem 10.125rem
