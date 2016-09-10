@@ -1,0 +1,31 @@
+// Hero ---------------------------
+.hero
+	background teal
+	text-align center
+	height 100vh
+
+// Header ---------------------------
+.site-header
+	background teal
+	border 1px solid
+	padding 1.875rem 0
+	.wrapper
+		display flex
+		justify-content space-between
+		align-items center
+		// border 1px solid gray
+.site-header-logo
+	width 180px
+	height 82px
+	.logo-group
+		transform translateX(-170px)
+		transition all 0.2s ease-in-out
+	.proposal, .fix
+		opacity 0
+		transition all 0.2s ease-in-out
+		transition-delay 0.2s
+	&:hover .logo-group
+		transform translateX(0px)	
+	&:hover .proposal,
+	&:hover .fix
+		opacity 1

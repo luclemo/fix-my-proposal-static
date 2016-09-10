@@ -1,7 +1,6 @@
 // Load plugins
 var gulp = require('gulp'),
 	stylus = require('gulp-stylus'),
-	jeet = require('jeet'), // stylus grid
 	autoprefixer = require('gulp-autoprefixer'),
 	minifyCss = require('gulp-minify-css'),
 	rename = require('gulp-rename'),
@@ -14,9 +13,7 @@ var gulp = require('gulp'),
 gulp.task('styles', function(){
 	 gulp.src('./src/css/style.styl')
 		.pipe(sourcemaps.init())
-		.pipe(stylus({
-			use: [jeet()],
-		}))
+		.pipe(stylus())
 		.pipe(autoprefixer({
 				browsers: ['last 2 versions']
 			}))
@@ -49,5 +46,5 @@ gulp.task('browser-sync', function() {
 // Watch!
 gulp.task('watch', ['browser-sync'], function(){
 	gulp.watch('./src/*.jade', ['templates']);
-	gulp.watch('./src/css/*.styl', ['styles']);
+	gulp.watch('./src/css/**/*.styl', ['styles']);
 });
