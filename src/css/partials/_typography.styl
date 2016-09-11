@@ -3,10 +3,16 @@ html
 	font-size 100%
 body
 	font-family fontMain
-	font-size 1.25rem
+	font-size 1.125rem
 	line-height 1.5
 	color blue
 	background cream
+	transition font-size 0.5s ease-in-out
+	+breakpoint(minphablet)
+		font-size 1.3125rem
+		// font-size 1.375rem
+		// font-size 1.5rem
+		// line-height 1.65
 	
 // Headers -----------------
 h1, h2, h3, h4

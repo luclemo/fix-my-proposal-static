@@ -1,7 +1,35 @@
 // Hero ---------------------------
 .hero
-	background teal
+	background teal url('img/bg-crash-1.jpg') center/cover no-repeat
 	text-align center
+	padding vert-space 0
+	padding-bottom 0
+	position relative
+	overflow hidden
+	display flex
+	flex-flow column nowrap
+	+breakpoint(minphablet)
+		padding vert-space*3 0
+		padding-bottom 0
+	.mask
+		margin-top vert-space
+		display flex
+		align-items baseline
+		justify-content center
+		img
+			display block
+			margin auto
+			min-width 110%
+			// min-width 110%
+.hero-logo
+	display block
+	margin auto
+	+breakpoint(minphablet)
+		width 60%
+		height auto
+.tagline
+	color tealPale
+
 // Header ---------------------------
 .site-header
 	background teal
