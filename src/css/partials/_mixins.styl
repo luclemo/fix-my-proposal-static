@@ -1,66 +1,92 @@
-  // Border-radius -----------------------
+	// Border-radius -----------------------
 full-radius(px = 5px)
-  border-radius px
+	border-radius px
 top-radius(px = 5px)
-  border-top-left-radius px
-  border-top-right-radius px
+	border-top-left-radius px
+	border-top-right-radius px
 right-radius(px = 5px)
-  border-bottom-right-radius px
-  border-top-right-radius px
+	border-bottom-right-radius px
+	border-top-right-radius px
 bottom-radius(px = 5px)
-  border-bottom-left-radius px
-  border-bottom-right-radius px
+	border-bottom-left-radius px
+	border-bottom-right-radius px
 left-radius(px = 5px)
-  border-bottom-left-radius px
-  border-top-left-radius px
+	border-bottom-left-radius px
+	border-top-left-radius px
 
 // Borders -----------------------
 double-border(outterSize, outterColor, innerSize, innerColor)
-  box-shadow  inset 0 0 0 outterSize outterColor,
-              inset 0 0 0 innerSize innerColor
+	box-shadow  inset 0 0 0 outterSize outterColor,
+							inset 0 0 0 innerSize innerColor
 
 // Components -----------------------
 box()
-  border 2px solid teal
-  background alpha(teal, 0.1)
-  full-radius()
-  
+	border 2px solid teal
+	background alpha(teal, 0.1)
+	full-radius()
+	
 // a11y --------------------
 screen-reader()
-  border 0
-  clip rect(0 0 0 0)
-  height 1px
-  margin -1px
-  overflow hidden
-  padding 0
-  position absolute
-  width 1px
+	border 0
+	clip rect(0 0 0 0)
+	height 1px
+	margin -1px
+	overflow hidden
+	padding 0
+	position absolute
+	width 1px
 
-  
+// Animation and transitions --------------
+transition-all(s = 0.2s)
+	transition-property all
+	transition-duration s
+	transition-timing-function ease-in-out
+// typography
+antialiased()
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+// Buttons and CTA ------------------------
+btn(bg = teal, col = cream)
+	color col
+	background bg
+	font-family fontSecondary
+	border 0
+	text-decoration none
+	antialiased()
+	transition-all()
+	&:hover,
+	&:active
+		background darken(bg, 10%)
+
+btn-size(fz = 1.7rem, pd = 0.7em 1.6em)
+	font-size fz
+	padding pd
+
+	
 // Media QuerieS
 // -------------------------
-breakpoint($point)
-  if $point == mindesktop
-    @media (min-width: 80em)
-      {block} // 1280px +
-  else if $point == laptop
-    @media (max-width: 64em)
-      {block} // 1024px -
-  else if $point == minlaptop
-    @media (min-width: 64em)
-      {block} // 1024px  +
-  else if $point == tablet
-    @media (max-width: 50em)
-      {block} // 800px -
-  else if $point == mintablet
-    @media (min-width: 50em)
-      {block} // 800px +
-  else if $point == phablet
-    @media (max-width: 37.5em)
-      {block} // 600px -
-  else if $point == minphablet
-    @media (min-width: 37.5em)
-      {block} // 600px +
-  else if $point == mobileonly
-    @media (max-width: 27em)
-      {block} // 432px -
+breakpoint(point)
+	if point == mindesktop
+		@media (min-width: 80em)
+			{block} // 1280px +
+	else if point == laptop
+		@media (max-width: 64em)
+			{block} // 1024px -
+	else if point == minlaptop
+		@media (min-width: 64em)
+			{block} // 1024px  +
+	else if point == tablet
+		@media (max-width: 50em)
+			{block} // 800px -
+	else if point == mintablet
+		@media (min-width: 50em)
+			{block} // 800px +
+	else if point == phablet
+		@media (max-width: 37.5em)
+			{block} // 600px -
+	else if point == minphablet
+		@media (min-width: 37.5em)
+			{block} // 600px +
+	else if point == mobileonly
+		@media (max-width: 27em)
+			{block} // 432px -
