@@ -8,12 +8,17 @@ var gulp = require('gulp'),
 	sourcemaps = require('gulp-sourcemaps'),
 	jade = require('gulp-jade'),
 	imagemin = require('gulp-imagemin'),
+	plumber = require('gulp-plumber'),
+	notify = require('gulp-notify');
 	reload = browserSync.reload;
 
 // Styles
 gulp.task('styles', function(){
 	 gulp.src('./src/css/style.styl')
 		.pipe(sourcemaps.init())
+		.pipe(plumber({
+		  errorHandler: notify.onError("Error: <%= error.message %>")
+		}))
 		.pipe(stylus())
 		.pipe(autoprefixer({
 				browsers: ['last 2 versions']
@@ -28,6 +33,9 @@ gulp.task('styles', function(){
 // Templates
 gulp.task('templates',function(){
   gulp.src(['./src/*.jade'])
+  	.pipe(plumber({
+  	  errorHandler: notify.onError("Error: <%= error.message %>")
+  	}))
     .pipe(jade({
 	    pretty : true
 	  }))
