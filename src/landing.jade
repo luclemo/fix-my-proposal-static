@@ -7,8 +7,9 @@ html(lang="en")
 		meta(name='viewport', content='width=device-width, initial-scale=1')
 
 		script(type="text/javascript", src="//fast.fonts.net/jsapi/e41465cd-078e-4596-a8ad-2ffa0b1d2602.js")
-	body
+	body.page
 		
+		//- Hero ---------------------
 		section.hero
 			.wrapper
 				h1.site-title Fix My Proposal
@@ -26,47 +27,105 @@ html(lang="en")
 				img(src="img/mask.svg", alt="")
 		
 		main
-			section.optin.optin-light
+			//- Optin-light ---------------------
+			section.optin.optin-light.module
 				.wrapper
-					h2 Proposal reviews to help new designers & developers land quality projects today.
-					p Leave me your email to get notified about launch date and receive my 
-						strong client questionnaire
-						| — a massive head start to gather info you need to write a successful proposal
+					h2.module-title Proposal reviews to help new designers & developers land quality projects today.
+					p Leave me your email to get notified about launch date.
+						//- | and receive my 
+						//- strong client questionnaire
+						//- | — a massive head start to gather info you need to write a successful proposal
 					form.signup(method='POST')
 						label(for='email') Your email address
-						input(type='email', name='email', placeholder='Your Email Address…')
-						input(type='submit', value='Put me on your list!')
-		
-			section.about
+						input(type='email', name='email', placeholder='Your Email…')
+						input(type='submit', value='Let me know!')
+
+			section.description.module
 				.wrapper
-					img(src="http://lorempixel.com/250/250/", alt="Lucas Lemonnier")
-					h4 Who am I and why am I doing this?
-					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos nesciunt sit, odit, praesentium, labore quam et porro atque qui architecto ipsum maxime vel. Sint tenetur eligendi veniam provident, optio assumenda.
-					div(style='margin: 2em 0')
+					.boxed
+						div.callout.small
+							| Launching in 
+							span May!
+						h3 Congrats, you've gone freelance! 
+							br
+							| Now you're…  on your own?!
+						p Speak to anyone who's been at this for a few years and they'll tell you that your first 3-5 projects will be a series of costly lessons learned the hard way.
+						p
+							| "Just the inevitable gauntlet of the novice freelancer".
+							br
+							| "Only the strong survive".
+							br
+							| "Gotta earn your stripes".
+						p The cliches go on and on, but none of them help you learn!
+						
+						h4 Here's how I can help you level that learning curve:
+						p
+							strong We schedule an appointment 
+							| and you send me your proposal for review a week before our meeting.
+						p
+							strong I review your proposal. 
+							| I will identify the areas which leave you vulnerable to wasting time, leaving money on the table, and damaging client relations before you send it off.
+						p
+							strong I give you my feedback and recommendations 
+							| during our phone/skype/hangout session.
+						h4 More specifically I will help you:
+						ul
+							li Win client trust by using language which will resonate with them
+							li Line up your proposed solutions with your client's strategic goals 
+							li Invite clients to openly share their budgets for proper scoping
+							li Stop negotiating your rates all while providing more value
+							li Win larger engagements through "packaged" offerings
+							li Stand out by uncovering problems your client didn't know they had
+							li Provide estimates as ranges rather than fixed numbers
+							li Identify opportunities for value/project pricing vs hourly pricing
+							li Find strategies for scoping large or vague projects
+							li Identify and address red flags early
+							li Learn how to deliver your proposal to maximize your chances 
+							li Ensure your proposal gets to the right person at the right time
+							li Learn when to say NO
+						div.callout.large Packages & pricing coming in May!
+		
+			//- About ---------------------
+			section.about.module
+				.wrapper.about-content
+					.about-image
+						img(class="profile-pic" src="img/lucas.jpg" alt="Lucas Lemonnier")
+					.about-text
+						h4 Who am I and why am I doing this?
+						p  My name is Lucas and I am an independent designer, web developer, and teacher.
+
+						p	I'm probably not so different from you except that I have been at this for roughly 10 years. I have made countless business errors, all from good faith and lack of experience. With support from people who believed in me and a lot of determination, I stuck with it long enough to use those failures and near misses as learning opportunities.
+
+						p	My goal is to help designers and developers approach their client relationships and communication with the same enthusiasm they have for their craft.
+
+						p
+							strong You've got the technical skills. It's time sell yourself with confidence.
+					//- div(style='margin: 2em 0')
 						a(href="#" class='btn-primary btn-large') some major link 
-					div(style='margin: 2em 0')
+					//- div(style='margin: 2em 0')
 						a(href="#" class='btn-primary btn-small') some smaller link 
 
-			section.optin.optin-dark
+			//- Optin-dark ---------------------
+			section.optin.optin-dark.module
 				.wrapper
-					h2 Let me find the holes in your proposal before your client does.
+					h2.module-title Let me find the holes in your proposal before your client does.
 					p Get notified about launch date & receive my free 
 						stong client questionnaire. 
 					form.signup(method='POST')
 						label(for='email') Your email address
-						input(type='email', name='email', placeholder='Your Email Address…')
-						input(type='submit', value='Put me on your list!')
+						input(type='email', name='email', placeholder='Your Email…')
+						input(type='submit', value='Let me know!')
 
-			section.typography
-				.wrapper
+		//- section.typography
+			.wrapper
 					h1 Proposal reviews to help new designers & developers land quality projects today.
 					p  In 2005, I was making a little over $90,000 USD annually as the VP of a boutique software development firm. It was a good company and I loved my fellow employees, but I was miserable. I spent most of my time arguing about invoices with clients, hounding developers to log their hours, and responding to RFPs with estimates that almost always turned out to be wrong.
 					p  In 2005, I was making a little over $90,000 USD annually as the VP of a boutique software development firm. It was a good company and I loved my fellow employees, but I was miserable. I spent most of my time arguing about invoices with clients, hounding developers to log their hours, and responding to RFPs with estimates that almost always turned out to be wrong.
-					h2 Proposal reviews to help new designers & developers land quality projects today.
+					h2 How should we go about doing it?
 					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id minima dolore, pariatur ad itaque! Qui quas in adipisci eveniet repellat.
-					h3 Proposal reviews to help new designers & developers land quality projects today.
+					h3 Proposal reviews to help new designers & developers land quality projects today 3.
 					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis itaque debitis mollitia! Dolore vitae atque maxime! Neque optio veritatis amet.
-					h4 Proposal reviews to help new designers & developers land quality projects today.
+					h4 Proposal reviews to help new designers & developers land quality projects today 4.
 					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ab tempore dolores vero odit culpa cupiditate exercitationem natus, nemo maxime?
 					ul
 						li Win client trust by using language which will resonate with them
@@ -81,4 +140,4 @@ html(lang="en")
 						li Identify and address red flags early
 						li Learn how to deliver your proposal to maximize your chances 
 						li Ensure your proposal gets to the right person at the right time
-						li Learn when to say NO
+						li Learn when to say NO			

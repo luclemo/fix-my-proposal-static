@@ -1,4 +1,32 @@
-	// Border-radius -----------------------
+// Media QuerieS
+// -------------------------
+breakpoint(point)
+	if point == mindesktop
+		@media (min-width: 80em)
+			{block} // 1280px +
+	else if point == laptop
+		@media (max-width: 64em)
+			{block} // 1024px -
+	else if point == minlaptop
+		@media (min-width: 64em)
+			{block} // 1024px  +
+	else if point == tablet
+		@media (max-width: 50em)
+			{block} // 800px -
+	else if point == mintablet
+		@media (min-width: 50em)
+			{block} // 800px +
+	else if point == phablet
+		@media (max-width: 37.5em)
+			{block} // 600px -
+	else if point == minphablet
+		@media (min-width: 37.5em)
+			{block} // 600px +
+	else if point == mobileonly
+		@media (max-width: 27em)
+			{block} // 432px -
+	
+// Border-radius -----------------------
 full-radius(px = 5px)
 	border-radius px
 top-radius(px = 5px)
@@ -41,7 +69,16 @@ transition-all(s = 0.2s)
 	transition-property all
 	transition-duration s
 	transition-timing-function ease-in-out
-// typography
+// typography --------------------------
+fz-small()
+	font-size 1rem
+	+breakpoint(minphablet)
+		font-size 1.125rem
+fz-large()
+	font-size 1.25rem
+	+breakpoint(minphablet)
+		font-size 1.5rem
+		
 antialiased()
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -61,32 +98,3 @@ btn(bg = teal, col = cream)
 btn-size(fz = 1.7rem, pd = 0.7em 1.6em)
 	font-size fz
 	padding pd
-
-	
-// Media QuerieS
-// -------------------------
-breakpoint(point)
-	if point == mindesktop
-		@media (min-width: 80em)
-			{block} // 1280px +
-	else if point == laptop
-		@media (max-width: 64em)
-			{block} // 1024px -
-	else if point == minlaptop
-		@media (min-width: 64em)
-			{block} // 1024px  +
-	else if point == tablet
-		@media (max-width: 50em)
-			{block} // 800px -
-	else if point == mintablet
-		@media (min-width: 50em)
-			{block} // 800px +
-	else if point == phablet
-		@media (max-width: 37.5em)
-			{block} // 600px -
-	else if point == minphablet
-		@media (min-width: 37.5em)
-			{block} // 600px +
-	else if point == mobileonly
-		@media (max-width: 27em)
-			{block} // 432px -

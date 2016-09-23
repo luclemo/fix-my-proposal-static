@@ -3,14 +3,17 @@ input[type='text'],
 input[type='email'],
 input[type='tel'],
 textarea
+	-webkit-appearance none
+	-moz-appearance none
+	appearance none
 	color blue
 	border 1px solid teal
 	background cream
 	padding 1em
 	margin 0.5em 0
-	outline none
+	border-radius 0
 	&:focus
-		box-shadow 0 0 5px teal
+		outline-color teal
 // placeholders -----------------
 input::placeholder,
 textarea::placeholder
@@ -26,6 +29,7 @@ input[type="submit"]
 	padding 1em
 	cursor: pointer
 	border: 0
+	border-radius 0
 	
 // signup forms -----------------
 .signup
@@ -49,13 +53,12 @@ input[type="submit"]
 		color cream
 		background transparent
 		border-color cream
-		outline none
 		&:focus
-			background teal
-			box-shadow 0 0 5px cream
-		  border: 1px solid cream
+			outline-color cream
 		&::placeholder
 			color tealPale
 	input[type='submit']
 		color teal
 		background cream
+		&:hover
+			// background darken(cream, 5%)

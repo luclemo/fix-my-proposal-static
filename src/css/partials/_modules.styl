@@ -1,3 +1,9 @@
+// General ------------------------
+.module
+	// border 1px dotted lightgrey
+section
+	// border 1px solid pink
+
 // Hero ---------------------------
 .hero
 	background teal url('img/bg-crash-1.jpg') center/cover no-repeat
@@ -10,13 +16,15 @@
 	flex-flow column nowrap
 	+breakpoint(minphablet)
 		padding vert-space*3 0
+		// padding vert-space*3 0
 		padding-bottom 0
 	.mask
-		margin-top vert-space
 		display flex			
 		align-items baseline
 		justify-content center
 		position relative
+		+breakpoint(minphablet)
+			margin-top vert-space
 		&::after
 			content ''
 			position absolute
@@ -37,6 +45,7 @@
 		height auto
 .tagline
 	color tealPale
+	fz-large()
 
 // Header ---------------------------
 .site-header
@@ -70,9 +79,37 @@
 .optin-dark
 	background teal url('img/bg-crash-2.jpg') center/cover no-repeat
 	color cream
+	padding vert-space 0
+	+breakpoint(mintablet)
+		padding vert-space*2.5
+	margin-bottom 0
+	.module-title
+		color cream
+		
+// about ----------------------------
+.about-content
+	+breakpoint(mintablet)
+		display flex
+		flex-flow row nowrap
+		justify-content space-between
+.about-image
+	text-align center
+.about-text {
+	flex-basis 65%;
+}
+.profile-pic
+	border-radius 50%
+	max-width 200px
+	transition-all()
+	+breakpoint(minphablet)
+		max-width 240px
 
-// description box ------------------
-.description
-	font-size fz-small
+// blue box container  ------------------
+.boxed
+	fz-small()
 	box()
-	padding 6.25rem 10.125rem
+	padding 2em
+	+breakpoint(minphablet)
+		padding 2em 3em
+	+breakpoint(minlaptop)
+		padding 4em 6em
