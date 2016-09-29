@@ -5,21 +5,18 @@ body
 	font-size 1rem
 	line-height 1.5
 	font-family fontMain
-	color blue
+	color darkBlue
 	background cream
 	antialiased()
 	transition font-size 0.5s ease-in-out
 	+breakpoint(minphablet)
 		font-size 1.3125rem
-		// font-size 1.375rem
-		// font-size 1.5rem
-		// line-height 1.65
 	
 // Headers -----------------
 h1, h2, h3, h4
 	font-family fontMainBold
 	font-weight normal
-	color teal
+	color blue
 h1
 	font-size 1.875rem // 30px
 	line-height 1.3
@@ -48,11 +45,20 @@ h4
 strong
 	font-family fontMainBold
 	font-weight normal
-
+em
+	font-family fontMainItalic
+	font-style normal
+blockquote
+	font-size 1.25rem
+	font-family fontSecondary
+	color lighten(darkBlue, 10)
+	margin 0
+	+breakpoint(minphablet)
+		font-size 1.8rem
+		margin 1em
 // lists -------------------
 ul
 	padding 0
-	// margin 2em 0
 	li
 		margin-bottom 0.7em
 		margin-left 1.3em

@@ -4,17 +4,16 @@ html(lang="en")
 		meta(charset="UTF-8")
 		title Document
 		link(rel="stylesheet", href="style.min.css")
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+
 		script(type="text/javascript", src="//fast.fonts.net/jsapi/e41465cd-078e-4596-a8ad-2ffa0b1d2602.js")
-	body
+	body.page
 		
+		//- Hero ---------------------
 		section.hero
 			.wrapper
 				h1.site-title Fix My Proposal
-				p.tagline Proposal reviews to help new designers & developers land quality projects today.
-		header.site-header
-			.wrapper
-				//- site logo
-				svg.site-logo.site-header-logo(viewbox='0 0 404 183')
+				svg.site-logo.hero-logo(viewbox='0 0 404 183' aria-hidden="true")
 					g.logo-group
 							g.parachute
 								path.Shape(d='M215.02 1.422c-30.348 7.01-49.11 37.99-41.997 69.18.037.508.282.978.68 1.297l51.746 41.033c1.018-.78 2.07-1.515 3.165-2.183l-52.6-41.722c-.074-.072-.153-.138-.237-.198.386-5.75 4.48-10.822 10.412-12.19 5.32-1.23 10.576.932 13.68 4.986.046.06.108.102.163.152l31.226 47.54c1.113-.552 2.278-1.063 3.452-1.49l-31.81-48.418c-.026-.036-.056-.07-.086-.106 1.466-4.218 4.997-7.658 9.69-8.74 4.88-1.128 9.712.56 12.877 3.972l12.097 52.4c.52-.14 1.093-.263 1.622-.375.665-.17 1.312-.33 1.983-.457l-12.097-52.4c1.35-4.45 4.954-8.09 9.832-9.215 4.686-1.082 9.375.468 12.54 3.61l-7.396 57.593c1.243-.126 2.51-.18 3.757-.172l7.213-56.478c.022-.06.02-.07.032-.133 1.013-5.005 4.848-9.266 10.17-10.495 5.933-1.37 11.837 1.393 14.703 6.394-.05.09-.09.184-.125.28l-28.988 60.56c1.277.117 2.544.323 3.803.574l28.52-59.566c.205-.442.225-.946.057-1.402-7.265-31.174-37.725-50.834-68.086-43.83z')
@@ -23,80 +22,94 @@ html(lang="en")
 								path.Proposal(d='M21.905 140.48V161H.575V97.28h27.36c3.24 0 6.42.345 9.54 1.035 3.12.69 5.91 1.86 8.37 3.51 2.46 1.65 4.44 3.84 5.94 6.57 1.5 2.73 2.25 6.165 2.25 10.305 0 3.96-.735 7.32-2.205 10.08-1.47 2.76-3.42 5.01-5.85 6.75-2.43 1.74-5.22 3-8.37 3.78-3.15.78-6.375 1.17-9.675 1.17h-6.03zm0-26.55v10.26h4.5c1.62 0 3.105-.405 4.455-1.215s2.025-2.175 2.025-4.095c0-1.02-.18-1.845-.54-2.475-.36-.63-.855-1.125-1.485-1.485-.63-.36-1.335-.615-2.115-.765-.78-.15-1.56-.225-2.34-.225h-4.5zm39.06-.27h19.98v5.4h.18c1.02-1.92 2.535-3.51 4.545-4.77 2.01-1.26 4.365-1.89 7.065-1.89 1.62 0 2.94.15 3.96.45l-1.62 17.64c-.66-.18-1.395-.315-2.205-.405-.81-.09-1.545-.135-2.205-.135-2.7 0-4.86.78-6.48 2.34-1.62 1.56-2.43 3.48-2.43 5.76V161h-20.79v-47.34zm92.16 23.49c0 4.08-.735 7.71-2.205 10.89-1.47 3.18-3.45 5.865-5.94 8.055-2.49 2.19-5.37 3.855-8.64 4.995-3.27 1.14-6.705 1.71-10.305 1.71-3.54 0-6.945-.57-10.215-1.71-3.27-1.14-6.135-2.805-8.595-4.995-2.46-2.19-4.425-4.875-5.895-8.055-1.47-3.18-2.205-6.81-2.205-10.89 0-4.02.735-7.605 2.205-10.755 1.47-3.15 3.435-5.805 5.895-7.965 2.46-2.16 5.325-3.795 8.595-4.905 3.27-1.11 6.675-1.665 10.215-1.665 3.6 0 7.035.555 10.305 1.665 3.27 1.11 6.15 2.745 8.64 4.905s4.47 4.815 5.94 7.965c1.47 3.15 2.205 6.735 2.205 10.755zm-27.09-7.83c-2.28 0-4.125.78-5.535 2.34-1.41 1.56-2.115 3.39-2.115 5.49 0 2.22.72 4.11 2.16 5.67 1.44 1.56 3.3 2.34 5.58 2.34 2.28 0 4.14-.78 5.58-2.34 1.44-1.56 2.16-3.45 2.16-5.67 0-2.1-.735-3.93-2.205-5.49-1.47-1.56-3.345-2.34-5.625-2.34zm68.04 32.94c-2.34 0-4.65-.435-6.93-1.305-2.28-.87-4.14-2.085-5.58-3.645h-.18v25.29h-20.61v-68.94h19.53v4.77h.18c1.74-1.98 3.84-3.48 6.3-4.5s4.86-1.53 7.2-1.53c3.54 0 6.66.72 9.36 2.16 2.7 1.44 4.95 3.33 6.75 5.67 1.8 2.34 3.165 4.98 4.095 7.92.93 2.94 1.395 5.94 1.395 9 0 3.12-.465 6.18-1.395 9.18-.93 3-2.295 5.685-4.095 8.055-1.8 2.37-4.035 4.275-6.705 5.715-2.67 1.44-5.775 2.16-9.315 2.16zm2.25-25.11c0-2.1-.66-3.93-1.98-5.49-1.32-1.56-3.24-2.34-5.76-2.34-2.46 0-4.425.78-5.895 2.34-1.47 1.56-2.205 3.39-2.205 5.49 0 2.22.735 4.11 2.205 5.67 1.47 1.56 3.435 2.34 5.895 2.34 2.52 0 4.44-.765 5.76-2.295 1.32-1.53 1.98-3.435 1.98-5.715zm125.46 8.82c0 3.18-.675 5.85-2.025 8.01-1.35 2.16-3.06 3.885-5.13 5.175s-4.335 2.22-6.795 2.79c-2.46.57-4.8.855-7.02.855-4.08 0-8.085-.585-12.015-1.755-3.93-1.17-7.335-2.835-10.215-4.995l10.17-11.79c1.44 1.32 3.135 2.385 5.085 3.195 1.95.81 3.825 1.215 5.625 1.215.72 0 1.395-.135 2.025-.405.63-.27.945-.765.945-1.485 0-.78-.555-1.395-1.665-1.845-1.11-.45-3.045-1.005-5.805-1.665-1.5-.36-3.03-.885-4.59-1.575s-2.985-1.605-4.275-2.745c-1.29-1.14-2.355-2.535-3.195-4.185-.84-1.65-1.26-3.615-1.26-5.895 0-3.06.675-5.67 2.025-7.83 1.35-2.16 3.06-3.915 5.13-5.265 2.07-1.35 4.32-2.34 6.75-2.97 2.43-.63 4.725-.945 6.885-.945 3.66 0 7.29.54 10.89 1.62 3.6 1.08 6.84 2.58 9.72 4.5l-9.72 11.61c-1.5-.96-3.03-1.71-4.59-2.25s-3.09-.81-4.59-.81c-1.02 0-1.86.135-2.52.405-.66.27-.99.795-.99 1.575 0 .6.375 1.065 1.125 1.395.75.33 2.475.765 5.175 1.305 1.86.36 3.675.915 5.445 1.665 1.77.75 3.36 1.71 4.77 2.88 1.41 1.17 2.535 2.595 3.375 4.275.84 1.68 1.26 3.66 1.26 5.94zm32.67-4.59c-3.06 0-5.52.33-7.38.99-1.86.66-2.79 1.89-2.79 3.69 0 .66.15 1.215.45 1.665.3.45.69.825 1.17 1.125.48.3 1.005.525 1.575.675.57.15 1.095.225 1.575.225 1.98 0 3.57-.63 4.77-1.89 1.2-1.26 1.8-2.88 1.8-4.86v-1.62h-1.17zm-.18-10.44c0-1.44-.495-2.505-1.485-3.195-.99-.69-2.295-1.035-3.915-1.035-1.92 0-3.735.405-5.445 1.215-1.71.81-3.225 1.755-4.545 2.835l-10.35-10.26c2.88-2.76 6.3-4.89 10.26-6.39s8.04-2.25 12.24-2.25c4.5 0 8.22.63 11.16 1.89 2.94 1.26 5.265 3 6.975 5.22 1.71 2.22 2.91 4.8 3.6 7.74.69 2.94 1.035 6.06 1.035 9.36V161h-18.81v-3.78h-.18c-1.2 1.8-2.91 3.09-5.13 3.87-2.22.78-4.38 1.17-6.48 1.17-1.86 0-3.765-.27-5.715-.81-1.95-.54-3.72-1.41-5.31-2.61-1.59-1.2-2.895-2.76-3.915-4.68s-1.53-4.29-1.53-7.11c0-3.3.855-5.985 2.565-8.055 1.71-2.07 3.885-3.69 6.525-4.86 2.64-1.17 5.595-1.965 8.865-2.385 3.27-.42 6.465-.63 9.585-.63v-.18zm28.08-37.98h21.24V161h-21.24V92.96z')
 							g.fix
 								path(d='M129.814 65.807c0 .62-.122 1.2-.367 1.74-.246.54-.58 1.004-1.005 1.396-.425.392-.915.702-1.47.93-.555.23-1.143.344-1.764.344-1.307 0-2.4-.433-3.283-1.298-.882-.867-1.323-1.904-1.323-3.113 0-.588.114-1.15.343-1.69.23-.54.555-1.005.98-1.397.425-.392.915-.71 1.47-.955.555-.246 1.16-.368 1.813-.368.62 0 1.21.114 1.764.343.555.23 1.045.54 1.47.93.425.393.76.858 1.004 1.398.246.54.368 1.118.368 1.74zM121.14 98V73.598h8.086V98h-8.085zm-2.988-31.115c-.294-.098-.637-.18-1.03-.245-.39-.065-.783-.098-1.175-.098-.75 0-1.356.13-1.813.392-.457.26-.817.612-1.078 1.053-.26.442-.44.94-.54 1.495-.097.555-.146 1.11-.146 1.666v2.45h5.44v6.027h-5.44V98h-8.036V79.625h-4.46v-6.027h4.46v-2.352c0-1.503.163-2.932.49-4.288.327-1.355.89-2.547 1.69-3.577.8-1.028 1.88-1.844 3.234-2.45 1.356-.603 3.047-.905 5.072-.905.686 0 1.364.04 2.033.122.67.082 1.283.205 1.838.368l-.538 6.37zM152.256 98l-5.243-7.497-5.39 7.497h-9.31l9.75-12.79-8.82-11.612h9.36l4.557 6.517 4.606-6.517h9.065l-8.77 11.613L161.713 98h-9.457zm166.11 0V84.672c0-.686-.05-1.347-.147-1.985-.1-.637-.28-1.184-.54-1.64-.26-.458-.612-.826-1.054-1.104-.44-.277-1.02-.416-1.74-.416-.685 0-1.28.147-1.788.44-.506.295-.93.687-1.274 1.177-.343.49-.596 1.053-.76 1.69-.162.638-.244 1.3-.244 1.985V98h-8.036V84.084c0-1.405-.278-2.515-.833-3.332-.554-.817-1.436-1.225-2.645-1.225-1.274 0-2.262.506-2.965 1.52-.702 1.012-1.053 2.253-1.053 3.723V98h-8.085V73.598h7.79v3.38h.1c.293-.522.66-1.028 1.1-1.518.443-.49.973-.923 1.594-1.298.62-.376 1.315-.678 2.082-.907.768-.23 1.61-.343 2.524-.343 1.764 0 3.258.36 4.483 1.078 1.226.72 2.18 1.748 2.867 3.087.817-1.274 1.862-2.287 3.136-3.038 1.274-.752 2.826-1.128 4.655-1.128 1.666 0 3.062.302 4.19.907 1.127.603 2.033 1.387 2.72 2.35.685.964 1.183 2.042 1.493 3.235.31 1.192.466 2.36.466 3.503V98h-8.036zm27.88 3.675c-.49 1.274-1.036 2.41-1.64 3.406-.605.997-1.323 1.846-2.157 2.55-.834.7-1.813 1.232-2.94 1.59-1.128.36-2.46.54-3.994.54-.75 0-1.527-.05-2.328-.147-.8-.098-1.494-.23-2.082-.392l.882-6.76c.392.13.825.236 1.298.318.474.08.907.122 1.3.122 1.24 0 2.14-.286 2.694-.858.555-.57 1.03-1.38 1.42-2.425l.785-2.01-10.192-24.01h8.918l5.44 15.68h.147l4.85-15.68h8.527l-10.927 28.078z')
-				nav.main-nav
-					ul
-						li
-							a(href="#") Articles
-						li.cta
-							a(href="#") Let's fix it!
-		
-		section.optin.optin-top
-			.wrapper
-				h2 Proposal reviews to help new designers & developers land quality projects today.
-				p Leave me your email to get notified about launch date and receive my 
-					strong client questionnaire
-					| — a massive head start to gather info you need to write a successful proposal
-				form.signup(method='POST')
-					label(for='email')
-					input(type='email', name='email', placeholder='Email Address…')
-					input(type='submit', value='Put me on your list!')
+				p.tagline Let me find the holes in your proposal before your client does.
+			svg.mask(aria-hidden="true" viewBox="0 0 1210 165" xmlns="http://www.w3.org/2000/svg")
+				title mask
+				path(d="M243.315 0H0v165h1210V0H966.685L605 165 243.315 0z")
 		
 		main
-			.wrapper
-				section.description
-					div.callout.small
-						| Launching in 
-						span May!
-					h3 Congrats, you've gone freelance! 
-						br
-						| Now you're…  on your own?!
-					p Speak to anyone who's been at this for a few years and they'll tell you that your first 3-5 projects will be a series of costly lessons learned the hard way.
-					p
-						| "Just the inevitable gauntlet of the novice freelancer".
-						br
-						| "Only the strong survive".
-						br
-						| "Gotta earn your stripes".
-					p The cliches go on and on, but none of them help you learn!
-					
-					h4 Here's how I can help you level that learning curve
-					p
-						strong We schedule an appointment 
-						| and you send me your proposal for review a week before our meeting.
-					p
-						strong We schedule an appointment 
-						| and you send me your proposal for review a week before our meeting.
-					p
-						strong We schedule an appointment 
-						| and you send me your proposal for review a week before our meeting.
-					p More specifically I will help you:
-					ul
-						li Win client trust by using language which will resonate with them
-						li Line up your proposed solutions with your client's strategic goals 
-						li Invite clients to openly share their budgets for proper scoping
-						li Stop negotiating your rates all while providing more value
-						li Win larger engagements through "packaged" offerings
-						li Stand out by uncovering problems your client didn't know they had
-						li Provide estimates as ranges rather than fixed numbers
-						li Identify opportunities for value/project pricing vs hourly pricing
-						li Find strategies for scoping large or vague projects
-						li Identify and address red flags early
-						li Learn how to deliver your proposal to maximize your chances 
-						li Ensure your proposal gets to the right person at the right time
-						li Learn when to say NO
-					div.callout.large Packages & pricing coming in May!
+			//- Optin-light ---------------------
+			section.optin.optin-light.module
+				.wrapper
+					h2.module-title Proposal reviews to help new designers & developers land quality projects today.
+					p Leave me your email to get notified about launch date.
+					form.signup(method='POST')
+						label(for='email') Your email address
+						input(type='email', name='email', placeholder='Your Email…')
+						input(type='submit', value='Let me know!')
 
-				section.about
-					img(src="http://lorempixel.com/250/250/", alt="Lucas Lemonnier")
-					h4 Who am I and why am I doing this?
-					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos nesciunt sit, odit, praesentium, labore quam et porro atque qui architecto ipsum maxime vel. Sint tenetur eligendi veniam provident, optio assumenda.
+			section.description.module
+				.wrapper
+					.boxed
+						h3 Congrats, you've gone freelance! 
+							br
+							| Now you're…  on your own?!
+						p Speak to anyone who's been at this for a few years and they'll
+							em tell you that your first 3-5 projects will be a series of costly lessons learned the hard way.
+						blockquote
+							p "Just the inevitable gauntlet of the novice freelancer!"
+								br
+								| "Only the strong survive!"
+								br
+								| "Gotta earn your stripes!"
+						p The cliches go on and on, but none of them help you learn!
+						
+						h3 Here's how I help you level up:
+						p
+							strong We schedule an appointment… 
+							br
+							| You send me your proposal for review a week before our meeting.
+						p
+							strong I review your proposal… 
+							br
+							| During that week I will identify the areas which leave you vulnerable to wasting time, leaving money on the table, and damaging client relations before you send it off.
+						p
+							strong I give you my feedback and recommendations… 
+							br
+							| Our meeting happens over phone/skype/hangout session.
+						h3 More specifically I will empower you to:
+						ul
+							li Win client trust by using language which will resonate with them
+							li Line up your proposed solutions with your client's strategic goals 
+							li Invite clients to openly share their budgets for proper scoping
+							li Stop negotiating your rates all while providing more value
+							li Win larger engagements through "packaged" offerings
+							li Stand out by uncovering problems your client didn't know they had
+							li Provide estimates as ranges rather than fixed numbers
+							li Identify opportunities for value/project pricing vs hourly pricing
+							li Find strategies for scoping large or vague projects
+							li Identify and address red flags early
+							li Learn how to deliver your proposal to maximize your chances 
+							li Ensure your proposal gets to the right person at the right time
+							li Learn when to say NO
+				div.callout.callout-large Packages & pricing coming soon!
+		
+			//- About ---------------------
+			section.about.module
+				.wrapper.about-content
+					a(class="about-image" href="http://lucaslemonnier.com")
+						img(class="profile-pic" src="img/lucas-lemonnier.jpg" alt="Lucas Lemonnier")
+					.about-text
+						h4 Who am I and why am I doing this?
+						p  My name is Lucas and I am an independent 
+							a(href="http://lucaslemonnier.com") designer/developer
+							|  and 
+							a(href="https://www.decodemtl.com/web-development-part-time/") teacher
+							|.
 
-		section.optin.optin-bottom
-			.wrapper
-				h2 Let me find the holes in your proposal before your client does.
-				p Get notified about launch date & receive my free 
-					stong client questionnaire. 
-				form.signup(method='POST')
-					label(for='email')
-					input(type='email', name='email', placeholder='Email Address…')
-					input(type='submit', value='Put me on your list!')
+						p	I'm probably not so different from you except that I have been at this for roughly 10 years. In the first few years I made countless business errors, all from good faith and lack of experience.
+
+						p	My goal is to help you fast-track that learning curve so you can approach your client relationships and communication with the same confidence and enthusiasm you have for your craft.
+
+						p
+							strong You've got the technical skills. It's time sell yourself with confidence.
+
+			//- Optin-dark ---------------------
+			section.optin.optin-dark.module
+				.wrapper
+					h2.module-title Let me find the holes in your proposal before your client does.
+					p Leave me your email to get notified about launch date. 
+					form.signup(method='POST')
+						label(for='email') Your email address
+						input(type='email', name='email', placeholder='Your Email…')
+						input(type='submit', value='Let me know!')

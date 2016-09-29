@@ -49,8 +49,8 @@ double-border(outterSize, outterColor, innerSize, innerColor)
 
 // Components -----------------------
 box()
-	border 2px solid teal
-	background alpha(teal, 0.1)
+	border 2px solid blue
+	background alpha(blue, 0.1)
 	full-radius()
 	
 // a11y --------------------
@@ -78,19 +78,22 @@ fz-large()
 	font-size 1.25rem
 	+breakpoint(minphablet)
 		font-size 1.5rem
+fz-xlarge()
+	font-size 1.5rem
+	+breakpoint(minphablet)
+		font-size 2rem
 		
 antialiased()
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 // Buttons and CTA ------------------------
-btn(bg = teal, col = cream)
+btn(bg = blue, col = cream)
 	color col
 	background bg
 	font-family fontSecondary
 	border 0
 	text-decoration none
 	antialiased()
-	transition-all()
 	&:hover,
 	&:active
 		background darken(bg, 10%)

@@ -6,26 +6,29 @@ textarea
 	-webkit-appearance none
 	-moz-appearance none
 	appearance none
-	color blue
-	border 1px solid teal
+	color darkBlue
+	border 1px solid blue
 	background cream
 	padding 1em
 	margin 0.5em 0
 	border-radius 0
 	&:focus
-		outline-color teal
+		outline-color blue
+
 // placeholders -----------------
 input::placeholder,
 textarea::placeholder
-	color alpha(blue,60%)
+	color alpha(darkBlue,60%)
 	font-family fontSecondary
 	antialiased()
+
 // buttons defaults -----------------
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"]
 	btn()
+	transition-all()
 	padding 1em
 	cursor: pointer
 	border: 0
@@ -56,9 +59,9 @@ input[type="submit"]
 		&:focus
 			outline-color cream
 		&::placeholder
-			color tealPale
+			color paleBlue
 	input[type='submit']
-		color teal
+		color blue
 		background cream
 		&:hover
-			// background darken(cream, 5%)
+			background lighten(lightBlue, 20)
