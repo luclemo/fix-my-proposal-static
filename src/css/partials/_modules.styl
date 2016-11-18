@@ -29,15 +29,17 @@
 // Header ---------------------------
 .site-header
 	background blue
-	border 1px solid
-	padding 1.875rem 0
+	padding 0.5em 0
 	.wrapper
 		display flex
 		justify-content space-between
 		align-items center
 .site-header-logo
-	width 180px
-	height 82px
+	width 120px
+	height auto
+	+breakpoint(minphablet)
+		width 180px
+		height 82px
 	.logo-group
 		transform translateX(-170px)
 		transition all 0.2s ease-in-out
@@ -45,6 +47,8 @@
 		opacity 0
 		transition all 0.2s ease-in-out
 		transition-delay 0.2s
+		+breakpoint(mobileonly)
+			display none
 	&:hover .logo-group
 		transform translateX(0px)	
 	&:hover .proposal,
