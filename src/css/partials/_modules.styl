@@ -42,18 +42,23 @@
 		height 82px
 	.logo-group
 		transform translateX(-170px)
-		transition all 0.2s ease-in-out
+		transition all .2s
+		transition-delay .1s
 	.proposal, .fix
 		opacity 0
-		transition all 0.2s ease-in-out
-		transition-delay 0.2s
+		transition all .2s
 		+breakpoint(mobileonly)
 			display none
 	&:hover .logo-group
-		transform translateX(0px)	
+		transform translateX(0px)
+		transition all .2s	
+		+breakpoint(mobileonly)
+			// remove the hover state on mobile!
 	&:hover .proposal,
 	&:hover .fix
 		opacity 1
+		transition all .5s
+		transition-delay .1s
 		
 // Optins ---------------------------
 .optin
